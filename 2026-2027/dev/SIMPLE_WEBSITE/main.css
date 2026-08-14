@@ -1,0 +1,69 @@
+/*define body cotent style*/
+body{
+    background: var(--bg);
+    color: var(--fontColor);
+    font-family: monospace;
+}
+
+ul{
+    font-family: Helvetica;
+}
+
+li{
+    list-style: circle;
+}
+
+.list{
+    list-style: square;
+}
+
+
+#msg{
+    font-family: Arial, sans-serif;
+}
+
+/* light theme font color black , background color white, and button colors */
+.light-theme{
+    --bg:var(--light_bg);
+    --fontColor: var(--black);
+    --btnBg:var(--black);
+    --btnFontColor:var(--white);
+}
+
+/* dark theme font color white , background color black, and button colors */
+.dark-theme{
+    --bg:var(--black);
+    --fontColor:var(--white);
+    --btnBg:var(--white);
+    --btnFontColor:var(--black);
+
+}
+
+/* medium blue theme with blue font on light blue background */
+.medium-theme{
+    --bg: #dfeeff;
+    --fontColor: #1f5fbf;
+}
+
+/*defualt theme*/
+:root{
+    --light_bg: #FFFFFF;
+    --white: #FFFFFF;
+    --black: #000000;
+    --medium_blue_bg: #dfeeff;
+    --medium_blue_font: #1f5fbf;
+}
+
+
+/*button styles*/
+.btn{
+    position: absolute;
+    top: 20px;
+    left: 250px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: none;
+    color:var(--btnFontColor);
+    background-color:var(--btnBg);
+}
