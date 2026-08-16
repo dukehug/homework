@@ -1,4 +1,11 @@
 /*Section styles*/
+
+.content-container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
 .project{
     background-color: floralwhite;
     padding: 50px;
@@ -18,6 +25,8 @@
 }
 
 .contact-container{
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
     gap: 50px;
 }
@@ -30,4 +39,17 @@
 .contact-info{
     flex:1;
     text-align: left;
+}
+
+/*Button styles*/
+.button{
+    background-color: #333;
+    color: white;
+    padding: 10px ;
+    border: none;
+    cursor: pointer;
+}
+
+.button:hover{
+    background-color: #555;
 }
