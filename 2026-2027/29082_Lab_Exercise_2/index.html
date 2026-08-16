@@ -83,26 +83,36 @@
                 <span class="mobile-brand-mark d-lg-none"><i class="bi bi-stars" aria-hidden="true"></i></span>
                 <p class="section-label">Member access</p>
                 <h2>Sign in to continue</h2>
-                <p>Enter your details below to access your workspace.</p>
+                <p>Use the demo details below to access your workspace.</p>
+              </div>
+
+              <!-- Visible demo credentials make this sample easy to test. -->
+              <div class="demo-credentials" aria-label="Demo login credentials">
+                <div class="demo-icon"><i class="bi bi-key" aria-hidden="true"></i></div>
+                <div>
+                  <span>Demo access</span>
+                  <p><strong>demo</strong> / <strong>auralis123</strong></p>
+                </div>
               </div>
 
               <!-- Demo login form -->
               <form id="loginForm" class="needs-validation" novalidate>
                 <div class="mb-3">
-                  <label for="email" class="form-label">Email address</label>
+                  <label for="username" class="form-label">Username</label>
                   <div class="input-shell">
-                    <i class="bi bi-envelope" aria-hidden="true"></i>
+                    <i class="bi bi-person" aria-hidden="true"></i>
                     <input
-                      type="email"
+                      type="text"
                       class="form-control"
-                      id="email"
-                      name="email"
-                      placeholder="name@example.com"
-                      autocomplete="email"
+                      id="username"
+                      name="username"
+                      placeholder="Enter your username"
+                      autocomplete="username"
+                      minlength="3"
                       required
                     />
                   </div>
-                  <div class="invalid-feedback">Please enter a valid email address.</div>
+                  <div class="invalid-feedback">Please enter your username.</div>
                 </div>
 
                 <div class="mb-2">
@@ -172,6 +182,43 @@
         </section>
       </div>
     </main>
+
+    <!-- Successful login modal -->
+    <div
+      class="modal fade welcome-modal"
+      id="welcomeModal"
+      tabindex="-1"
+      aria-labelledby="welcomeModalTitle"
+      aria-describedby="welcomeModalDescription"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <button
+            type="button"
+            class="btn-close btn-close-white modal-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+
+          <div class="modal-body text-center">
+            <div class="welcome-icon" aria-hidden="true">
+              <i class="bi bi-stars"></i>
+              <span></span>
+            </div>
+            <p class="section-label">Login successful</p>
+            <h2 id="welcomeModalTitle">Welcome to Auralis</h2>
+            <p id="welcomeModalDescription">
+              You&rsquo;re signed in and ready to turn your brightest ideas into something meaningful.
+            </p>
+            <button type="button" class="btn btn-login w-100" data-bs-dismiss="modal">
+              <span>Enter your workspace</span>
+              <i class="bi bi-arrow-right" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Footer -->
     <footer class="site-footer container-fluid px-4 px-md-5 py-4">
