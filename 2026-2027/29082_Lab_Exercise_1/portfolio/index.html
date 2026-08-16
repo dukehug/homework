@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <!--External CSS-->
+    <link rel="stylesheet" href="styles.css">
+    <!--Bootstrap CSS & JS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <style>
+        /*Internal CSS*/
+        .intro{
+            background-color: #f0f0f0;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!--Header section-->
+    <header>
+        <!--Inline CSS-->
+        <h1 style= "color:black; text-align:center;">My Portfolio</h1>
+    </header>
+
+    <!--Navigation bar-->
+    <nav class="navbar navbar-dark bg-dark">
+        <ul class="nav justify-content-center w-100">
+            <li class="nav-item"><a class="nav-link active text-white fw-bold" href="#about">ABOUT</a></li>
+            <li class="nav-item"><a class="nav-link active text-white fw-bold" href="#project">PROJECTS</a></li>
+            <li class="nav-item"><a class="nav-link active text-white fw-bold" href="#contact">CONTACT</a></li>
+        </ul>
+    </nav>
+
+
+    <!--About Section-->
+    <section id="about" class="intro">
+        <div class="container">
+            <h1>Welcome to My Portfolio</h1>
+            <p>This is a showcase of my work and projects.</p>
+            <br>
+
+
+            <div class="row">
+
+                <!-- About Me -->
+                <div class="col-md-6" style="text-align: left;">
+                    <h2>About Me</h2>
+                    <p>
+                        Hello! I'm Duke Hsu, a BSIT Student studying at Adamson University. 
+                        I enjoy creating innovative solutions and learning new technologies.
+                        My development journey has been fueled by curiosity and a passion for problem-solving. 
+                        When I'm not coding, I love exploring new places, reading tech blogs, and photography.  
+
+
+                    </p>
+                </div>
+
+                <!-- Profile Image -->
+                <div class="col-md-6">
+                    <img src="images/duke.jpg" alt="Duke Hsu" class="img-fluid rounded-circle">
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!--Project Section-->
+    <section id="project" class="project">
+        <h2>Project</h2>
+        <p>Here are some of my projects </p>
+        <div class="project-list"> <!-- -->
+            <!-- Project 0 -->
+            <div class="card" style="width: 18rem;">
+                <img src="https://img.dukehsu.com/blog/20260810180148725.webp" alt="Weekly Schedule Maker">
+                <div class="card-body">
+                    <h5 class="card-title">Schedule Maker</h5>
+                    <p class="card-text">Generate a schedule in seconds.</p>
+                    <a href="https://weekly.52hz.im" target="_blank" class="btn btn-primary">Visit</a>
+                </div>
+            </div>
+
+            <!-- Project 1 -->
+            <div class="card" style="width: 18rem;">
+                <img src="https://raw.githubusercontent.com/dukehug/BB-Better-Layout/main/shotscreen/marquee-promo-1400x560.png" alt="Weekly Schedule Maker">
+                <div class="card-body">
+                    <h5 class="card-title">BB Better Layout</h5>
+                    <p class="card-text">Improve your Blackboard experience with a cleaner side navigation bar, simple course banners, a back-to-top button, and more.</p>
+                    <a href="https://chromewebstore.google.com/detail/bb-better-layout-for-adam/pbnangjmldocmbkogkophjbobmnnppki?hl=en" target="_blank" class="btn btn-primary">Visit</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="contact-container">
+
+            <!--Left column-->
+            <div class="contact-form">
+                <h2>Contact Me</h2>
+                <form id="contactForm">
+                    <div class="mb-3">
+                        <label for="contactMe" class="form-label">Your Name</label>
+                        <input type="text" class="form-control" id="contactMe" placeholder="Enter your name" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="contactEmail" class="form-label">Your Email</label>
+                        <input type="email" class="form-control" id="contactEmail" placeholder="Enter your email" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="contactMessage" class="form-label">Your Message</label>
+                        <textarea class="form-control" id="contactMessage" rows="3" placeholder="Enter your message" required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" >Submit</button>
+                </form>
+            </div>
+
+            <!--Right column-->
+            <div class="contact-info">
+                <h3>Contact Information</h3>
+                <p>Email: <a href="mailto:kamusta@dukehsu.com">kamusta@dukehsu.com</a></p>
+                <p>Phone: <a href="tel:+639175555555">+63 917 555 5555</a></p>
+                <p>LinkedIn: <a href="https://www.linkedin.com/in/xxxx" target="_blank">linkedin.com/in/xxxxxx</a></p>
+                <p>GitHub: <a href=https://github.com/dukehug target="_blank">github.com/dukehug</a></p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="contactModalLabel">Thank You!</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Thank you for reaching out! I will get back to you as soon as possible.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>         
+
+
+    <!--Footer-->
+    <footer class="bg-dark text-white text-center py-3">
+        &copy; 2026 Duke Hsu. All rights reserved.
+    </footer>
+
+    <!--Internal JS-->
+    <!--Check form submission-->    
+    <script>
+        const contactForm = document.getElementById('contactForm');
+        contactForm.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission
+            // Show the modal
+            const contactModal = new bootstrap.Modal(document.getElementById('contactModal'));
+            contactModal.show();
+        });
+    </script>
+
+</body>
+</html>

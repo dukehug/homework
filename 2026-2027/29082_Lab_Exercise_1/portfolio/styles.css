@@ -1,0 +1,33 @@
+/*Section styles*/
+.project{
+    background-color: floralwhite;
+    padding: 50px;
+    text-align: center;
+}
+
+.project-list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: stretch;
+}
+
+.contact{
+    background-color: #f0f0f0;
+    padding: 50px;
+}
+
+.contact-container{
+    display: flex;
+    gap: 50px;
+}
+
+.contact-form{
+    flex:1;
+    text-align: left;
+}
+
+.contact-info{
+    flex:1;
+    text-align: left;
+}
