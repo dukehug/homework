@@ -1,0 +1,78 @@
+version: '3.8'
+
+services:
+  php:
+    build: .
+    container_name: php-app
+    volumes:
+      - ./www:/var/www/html  # 改為 www 目錄
+    ports:
+      - "9000:9000"
+    depends_on:
+      - mysql
+    networks:
+      - app-network
+
+  mysql:
+    image: mysql:8.0
+    container_name: mysql-app
+    environment:
+      MYSQL_ROOT_PASSWORD: root_password
+      MYSQL_DATABASE: my_app
+      MYSQL_USER: app_user
+      MYSQL_PASSWORD: app_password
+    volumes:
+      - mysql_data:/var/lib/mysql  # Docker 管理卷，不用手動建立
+    ports:
+      - "3306:3306"
+    networks:
+      - app-network
+
+  nginx:
+    image: nginx:latest
+    container_name: nginx-app
+    volumes:
+      - ./www:/var/www/html
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    ports:
+      - "80:80"
+    depends_on:
+      - php
+    networks:
+      - app-network
+  
+  adminer:
+    image: adminer:latest
+    container_name: adminer-app
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mysql
+    networks:
+      - app-network
+    environment:
+      ADMINER_DEFAULT_SERVER: mysql
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:latest
+    container_name: phpmyadmin_ui
+    ports:
+      - "8081:80"
+    depends_on:
+      - mysql
+    networks:
+      - app-network
+    environment:
+      PMA_HOST: mysql
+      PMA_USER: app_user
+      PMA_PASSWORD: app_password
+      PMA_DB: my_app
+
+
+volumes:
+  mysql_data:
+
+networks:
+  app-network:
+    driver: bridge
+
