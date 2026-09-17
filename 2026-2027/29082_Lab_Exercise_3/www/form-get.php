@@ -201,6 +201,9 @@ $conn->close();
                                 <td><?php echo htmlspecialchars(substr($row['message'], 0, 50)) . (strlen($row['message']) > 50 ? '...' : ''); ?></td>
                                 <td><?php echo htmlspecialchars($row['created_at']); ?></td>
                                 <td>
+                                    <button type="button" class="btn btn-warning btn-sm">
+                                        Update
+                                    </button>
                                     <a href="?delete=<?php echo $row['id']; ?>" 
                                        class="btn btn-danger btn-sm"
                                        onclick="return confirm('Are you sure you want to delete this record?');">
