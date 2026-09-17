@@ -73,7 +73,7 @@ if (isset($_GET['id'])) {
             <a href="edit_user.php">Cancel</a>
         </form>
     <?php } ?>
-
+    <a href='/index.html'>Back to Home </a>
 </body>
 </html>
 <?php $conn->close(); ?>

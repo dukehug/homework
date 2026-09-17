@@ -42,6 +42,7 @@ try {
         //output table info
         echo "Table: <strong>$tableName</strong>";
         echo " — Records: <strong>$total</strong><br>";
+        echo "<a herf='/index.html'>Back to Home</a>";
     }
 
 } catch (mysqli_sql_exception $e) {
@@ -51,5 +52,6 @@ try {
     echo "Error code: " . $e->getCode() . "<br>";
     echo "File: " . $e->getFile() . "<br>";
     echo "Line: " . $e->getLine();
-}
+    echo "<a herf='/index.html'>Back to Home</a>";
+  } 
 ?>

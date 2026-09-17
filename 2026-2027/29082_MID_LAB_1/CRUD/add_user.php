@@ -56,5 +56,6 @@ $conn->close();
 
         <button type="submit">Submit</button>
     </form>
+    <a herf="/index.html"> Back to Home </a>
 </body>
 </html>
