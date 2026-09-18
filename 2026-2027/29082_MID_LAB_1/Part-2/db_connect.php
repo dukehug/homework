@@ -1,9 +1,9 @@
 <?php
 mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 
-$servername = "appdev.dkcpu.com";
+$servername = "{your_db_host}";
 $username = "lab_db";
-$password = "C4aYBaDp6n5EJDEJ";
+$password = "{your_db_password}";
 $dbname = "lab_db";
 
 try {
